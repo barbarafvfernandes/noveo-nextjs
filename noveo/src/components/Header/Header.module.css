@@ -1,0 +1,25 @@
+.header {
+    background-color: #1f1f1f;
+    padding: 1rem 2rem; 
+    position: relative;
+    z-index: 100;
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo {
+    margin: 0;
+}
+
+.header__logo a {
+    color: #d60510;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+

@@ -1,0 +1,94 @@
+/* Regras mobile */
+
+.header__nav {
+    display: none; 
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #1f1f1f;
+    flex-direction: column;
+    padding: 1rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    z-index: 99;
+}
+
+.nav_open {
+    display: flex;
+}
+
+.header__nav a {
+    color: #ccc;
+    text-decoration: none;
+    display: block;
+    padding: 1rem 2rem;
+    margin: 0;
+    border-bottom: 1px solid #2a2a2a;
+    transition: color 0.2s ease;
+}
+
+.header__nav a:hover {
+    color: #d60510;
+}
+
+.menu_btn {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.menu_icon, .menu_icon::before, .menu_icon::after {
+    background-color: #ccc;
+    display: block;
+    height: 2px;
+    width: 24px;
+    position: relative;
+    transition: all 0.2s ease-out;
+}
+
+.menu_icon::before, .menu_icon::after {
+    content: '';
+    position: absolute;
+}
+
+.menu_icon::before { top: 6px; }
+.menu_icon::after { top: -6px; }
+
+.open .menu_icon {
+    background: transparent;
+}
+.open .menu_icon::before {
+    transform: rotate(-45deg);
+    top: 0;
+}
+.open .menu_icon::after {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+/* Regras desktop */
+
+@media (min-width: 769px) {
+    .menu_btn {
+        display: none;
+    }
+
+    .header__nav {
+        display: flex;
+        position: static;
+        width: auto;
+        background-color: transparent;
+        flex-direction: row;
+        padding: 0;
+        box-shadow: none;
+    }
+
+    .header__nav a {
+        display: inline;
+        padding: 0;
+        margin-left: 1rem;
+        border-bottom: none;
+    }
+}
