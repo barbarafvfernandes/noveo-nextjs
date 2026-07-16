@@ -1,4 +1,4 @@
-import { notFound } from "next/dist/client/components/navigation";
+import { notFound } from "next/navigation";
 import Link from "next/link";
 import styles from "./DetalheFilme.module.css";
 import { getMovieDetails } from "@/lib/api/tmdb";
